@@ -1,0 +1,41 @@
+node.js code
+============
+
+var app = require('express')();
+var httpServer = require('http').Server(app);
+//const cors = require('cors');  // for browsers
+const port = 3000; // ignored by replit
+
+const path = require('path');
+
+var io = require("socket.io")(httpServer, {
+ cors: {
+   origin: "*",
+   methods: ["GET", "POST"]
+ } 
+});
+
+// handle a browser
+app.get('/', function(req, res) {
+//  res.send('Server is up and running');
+  res.sendFile(path.join(process.cwd(), "/html/index.html"));
+  console.log('got a get');
+});
+
+httpServer.listen(port, () => {
+  console.log('listening on *:' + port);
+});
+
+io.on('connection', (socket) => {
+  console.log('connect');
+
+  socket.on('chat_message', (msg) => {
+    io.emit('chat_message', msg);
+    console.log('message: ' + msg);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("disconnect");
+  });
+
+})
