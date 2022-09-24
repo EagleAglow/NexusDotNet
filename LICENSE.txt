@@ -2,13 +2,11 @@ Project: Nexus Application
 =======================================================================================
 =======================================================================================
 Uses NuGet package "SocketIOClient" from: https://www.nuget.org/packages/SocketIOClient/3.0.6/
-=======================================================================================
 Source hosted at: https://github.com/doghappy/socket.io-client-csharp
-=======================================================================================
 SocketIOClient Copyright (c) 2019 HeroWong, MIT License 
 =======================================================================================
 =======================================================================================
-Dependencies Licenses...
+Other Dependencies Licenses...
 	Microsoft.Bcl.AsyncInterfaces - MIT: https://licenses.nuget.org/MIT
 	System.Buffers - MIT: https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
 	System.Collections - Microsoft .NET LIBRARY: https://dotnet.microsoft.com/en-us/dotnet_library_license.htm
