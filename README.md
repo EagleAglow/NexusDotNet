@@ -2,9 +2,8 @@
 This is a C# "dot net" programming exercise (in Visual Studio 2022) to implement a chat system with a VBA "UserForm" in a PowerPoint
 (or other Microsoft Office) file.
 
-The underlying framework is internet server/client communication with Socket.IO (https://socket.io/), that provide server code for
-JavaScript (Node.j and Deno), Java, Python and Golang. To set up a "node.js" server, use the code in node.js.code.txt.  Refer to
-the file "replit.txt" to set up a server on replit.com.
+The underlying framework is internet server/client communication with Socket.IO (https://socket.io/), with server code for
+JavaScript (Node.js). To set up a server, use the code in node.js.code.txt, or refer to the file "replit.txt" to set up a server on replit.com.
 
 The Nexus executable is a Windows console program that connects to the server, and opens "Named Pipes" that can be read/written by 
 VBA as generic files.  Socket.IO uses a tag/content structure that Nexus converts to/from a "|tag|content|" string.  Presently,
